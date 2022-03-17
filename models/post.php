@@ -53,9 +53,15 @@ function displayPost(){
 
 
 // Function delete Post
-function deletePost(){
+function deletePost($id)
+{
+    global $database;
+    $statement = $database->prepare("DELETE FROM posts WHERE postid = :id");
+    $statement->execute([
+        ':id' => $id,
+    ]);
+}   
 
-}
 
 
 

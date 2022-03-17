@@ -36,14 +36,14 @@
         ?>
         
         <div class="card">
-            <div class="button">
-                <a href="#">delete</a>
-                <a href="#">edit</a>
-            </div>
             <div class="card-body">
-                <h3 class="firstname"><?= $post['description'];?></h3>
+                <h5 class="firstname"><?= $post['description'];?></h5>
                 <img src="../images/<?=$post['image'];?>" alt="">
             </div> 
+            <div class="function">
+                <a href="../controllers/delete_post.php?id=<?= $post['postid']?>">delete</a>
+                <a href="#">edit</a>
+            </div>
         </div>
         
         <?php endforeach?>
