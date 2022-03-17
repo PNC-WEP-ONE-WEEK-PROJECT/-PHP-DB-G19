@@ -26,7 +26,7 @@
     </div>
     <div class="main">
         <h1>Create Post</h1>
-        <form action="../controllers/create_post.php" method = "post">
+        <form action="../controllers/create_post.php" method = "post" enctype="multipart/form-data">
             <div class="head-card">
                 <div class="profile-pic">
                     <img src="../images/1.jpg" alt="">

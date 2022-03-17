@@ -16,7 +16,14 @@ function createAccount($firstname,$lastname,$gender,$email,$password,$country)
     header("location: ../index.php");
 }
 
-
+// function get all item
+function getItem()
+{
+    global $database;
+    $statement = $database->prepare("SELECT * FROM posts ORDER BY postid DESC");
+    $statement->execute();
+    return $statement->fetchAll();
+}
 
 // function Create Post
 function createPost($description,$image,$userid)
