@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif; 
+}
+nav{
+    background: blue;
+    padding: 15px;
+}
+
+nav,.friend-post,.container,.manu,.search,.profile-pic{
+    display: flex;
+}
+nav{
+    justify-content: space-around;
+}
+.friend-post a{
+    background: white;
+    padding: 10px;
+    margin: 0 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-style: normal;
+}
+.friend-post a:hover{
+    color: red;
+}
+.friend-post li,.manu li{
+    list-style: none;
+}
+
+.logo{
+    font-size: large;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.manu a{
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 90%;
+    margin-top: 15px;
+}
+.manu a:hover{
+    background: #eee;
+}
+.manu,.search{
+    justify-content: center;
+}
+.search input{
+    padding: 15px;
+    margin: 10px 10px;
+    width: 80%;
+}
+
+.sidebare{
+    width: 40%;
+}
+
+.main{
+    overflow: scroll;
+    height: 90vh;
+    width: 90%;
+}
+
+.manu{
+    width: 100%;
+}
+.active{
+    background: #eee;
+}
+h1{
+   color: black; 
+}
+
+.description textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: #eee;
+    border-radius: 5px;
+    resize: none;
+}
+
+
+hr{
+    border: 1px solid black;
+}
+.profile-pic img{
+    width: 15%;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.profile-pic{
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.post input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    background: blue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}

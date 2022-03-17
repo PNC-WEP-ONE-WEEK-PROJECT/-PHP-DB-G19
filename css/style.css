@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* Body */
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif; 
+}
+
+/* Style input in form*/
+.email input,.password-index input,.login input[type="submit"],.cre-name input,.cre-email input,.fullname input,.password-reg input,.email-reg input,.country select{
+    width: 100%;
+    box-sizing: border-box;
+}
+.email input,.password-index input,.login input[type="submit"],.fullname input{
+    margin-top: 30px;
+    padding: 15px;
+}
+.login input[type="submit"]{
+    background: rgb(56, 56, 253);
+    border: none;
+    font-size: larger;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.login input[type="submit"]:hover{
+    background:rgb(92, 92, 255) ;
+}
+
+/* Color style*/
+.login input[type="submit"]{
+    color: #fff;
+}
+.title h1,a{
+    color: blue;
+}
+
+
+form{
+    width: 50%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 25px;
+    border-radius: 10px;
+}
+h1,p{
+    text-align: center;
+    
+}
+span,.fullname .input p{
+    color: red;
+}
+.help{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 7px;
+}
+a{
+    text-decoration: none;
+    font-style: italic;
+}
+a:hover{
+    text-decoration: underline;
+}
+/* End of style input index */
+
+
+
+/* Style register file input */
+.fullname,.password-reg{
+    display: flex;
+}
+.fullname .input input,.password-reg input{
+    margin: 5px;
+}
+.email-reg input,.country select{
+    margin: 5px;
+    width: 98.5%;
+    padding: 15px;
+} 
+.password-reg input{
+    padding: 15px;
+}
+
+.input,.password{
+    width: 50%;
+    margin-right: 10px;
+}
