@@ -42,7 +42,7 @@
             </div> 
             <div class="function">
                 <a href="../controllers/delete_post.php?id=<?= $post['postid']?>">delete</a>
-                <a href="#">edit</a>
+                <a href="edit_form.php?id=<?= $post['postid']?>">edit</a>
             </div>
         </div>
         
@@ -50,9 +50,4 @@
     </div>
 </div>
 </div>
-
-
-
-
-
 <?php require_once "../templates/footer.php";?>
