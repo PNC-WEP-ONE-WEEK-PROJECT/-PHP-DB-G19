@@ -1,7 +1,7 @@
 <?php 
 require_once "database.php"; 
 
-// function create comment //
+// function create comments //
 function createComment($content, $postid, $userid)
 {
     global $database;
@@ -12,6 +12,7 @@ function createComment($content, $postid, $userid)
         ':userid' => $userid,
     ]);
 }
+
 
 // function get all comments
 function getAllComment($postid)

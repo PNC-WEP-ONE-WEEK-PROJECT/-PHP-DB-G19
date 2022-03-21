@@ -1,5 +1,5 @@
  <?php
-
+// create comment //
 require_once "../models/comment.php";
 
 if ($_SERVER['REQUEST_METHOD'] === "POST"){
