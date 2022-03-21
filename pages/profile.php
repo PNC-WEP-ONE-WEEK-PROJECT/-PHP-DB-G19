@@ -68,8 +68,8 @@
                 <div class="comment-content">
                     <h3><?=$comment['content'];?></h3>
                     <div class="option">
-                        <a href="#">edit</a>
                         <a href="#">delete</a>
+                        <a href="#">edit</a>
                     </div>
                 </div>
             <?php
@@ -77,7 +77,6 @@
             ?>
 
         </div>
-        
         <?php endforeach?>
     </div>
 </div>
