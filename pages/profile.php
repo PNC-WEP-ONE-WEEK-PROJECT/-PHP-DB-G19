@@ -1,6 +1,7 @@
 <?php 
     require_once "../templates/header.php"; 
     require_once "../controllers/create_post.php";
+    require_once "../controllers/create_comment.php";
 ?>
 
 <nav>
@@ -28,31 +29,52 @@
             <a href="">Logout</a>
         </div>
     </div>
+
     <div class="main">
-        <?php
-            require_once "../models/post.php";
-            $posts = getItem() ;
-            foreach ($posts as $post):
-        ?>
-        
+    <?php
+    // display comment on the post//
+        require_once "../models/post.php";
+        $posts = getItem() ;
+        foreach ($posts as $post):
+    ?>
         <div class="card">
+            <div class="card-header">
+                <div class="user-profile">
+                    <img src="../images/avatar.png" alt="" class="avatar">
+                    <h3>Chhaiya PHAI</h3>
+                </div>
+                <div class="function">
+                    <a href="../controllers/delete_post.php?id=<?= $post['postid']?>">delete</a>
+                    <a href="#">edit</a>
+                </div>
+            </div>
             <div class="card-body">
                 <h5 class="firstname"><?= $post['description'];?></h5>
                 <img src="../images/<?=$post['image'];?>" alt="">
             </div> 
-            <div class="function">
-                <a href="../controllers/delete_post.php?id=<?= $post['postid']?>">delete</a>
-                <a href="#">edit</a>
+            <div class="card-footer">
+                <button>like <i class="fa fa-thumbs-up"></i> </button>
+                <form action="../controllers/create_comment.php" method="post">
+                    <input type="hidden" name="postid" value = "<?= $post['postid'];?>">
+                    <textarea name="comment" placeholder="comment..." class="comment"></textarea>
+                    <button>submit</button>
+                </form>
             </div>
+            <?php
+            $comments = getAllComment($post['postid']);
+            foreach ($comments as $comment)
+            {
+            ?>
+                <div class="comment-content">
+                    <h3><?=$comment['content'];?></h3>
+                </div>
+            <?php
+            }
+            ?>
+
         </div>
         
         <?php endforeach?>
     </div>
 </div>
-</div>
-
-
-
-
-
 <?php require_once "../templates/footer.php";?>

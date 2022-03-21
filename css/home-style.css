@@ -68,7 +68,6 @@ nav{
 }
 
 .main .card{
-    display: flex;
     justify-content: space-around;
     padding: 30px;
     width: 70%;
@@ -77,21 +76,62 @@ nav{
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
 
-.main .card .card-body{
+.main .card .cardody{
     width:100%;
+}
+
+.main .card .card-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main .card .card-header .user-profile{
+    display: flex;
+}
+
+.main .card .card-header .avatar{
+    width:20%;
+    border-radius: 50%;
+    height: 90%;
 }
 
 .main .card .card-body img{
     margin: auto;
     width:100%;
     height: 60vh;
-    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .main .card .function{
     width: 30%;
     display: flex;
     justify-content: space-around;
+}
+
+.main .card .card-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.main .card .card-footer button{
+    width: 30%;
+    font-size:15px;
+}
+
+.main .card .card-footer form{
+    display: flex;
+}
+
+.main .card .card-footer form .comment{
+    resize: none;
+    width: 100%;
+}
+
+.main .card .comment-content{
+    background: red;
 }
 
 .manu{
