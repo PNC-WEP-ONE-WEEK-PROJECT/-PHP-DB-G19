@@ -39,8 +39,13 @@ function createPost($description,$image,$userid)
 
 
 // Fuction edit Post
-function editPost(){
-
+function editPost($id){
+    global $database;
+    $statement = $database->prepare('SELECT * FROM posts WHERE postid = :id');
+    $statement->execute([
+        ':id'=>$id,
+    ]);
+    return $statement->fetch();
 }
 
 
@@ -63,7 +68,16 @@ function deletePost($id)
 }   
 
 
-
-
+// Fuction update Post 
+function updatePost($description,$image,$id,$userid){
+    global $database;
+    $statement = $database->query("UPDATE posts SET description = '$description',image = '$image',userid = $userid WHERE postid= $id");
+    // $statement->execute([
+    //     ':description'=>$description,
+    //     ':image'=>$image,
+    //     ':id'=>$id,
+    //     ':userid'=>$userid
+    // ]);
+}
 
 
