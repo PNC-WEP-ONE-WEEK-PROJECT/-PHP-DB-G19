@@ -52,7 +52,7 @@
                 <textarea name="description" id="description" placeholder="Say something...."><?= $post['description']?></textarea>
             </div>
             <div class="choosefile">
-                <input type="file" name="file">
+                <input type="file" name="file" value = "hello">
             </div>
             <div class="post">
                 <input type="submit" value="Update">

@@ -1,11 +1,13 @@
+/* Link google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* Style body */
 body{
     margin: 0;
     padding: 0;
     font-family:'Poppins', sans-serif; 
 }
 nav{
-    background: blue;
+    background: rgb(26, 26, 129);
     padding: 15px;
 }
 
@@ -16,7 +18,7 @@ nav{
     justify-content: space-around;
 }
 .friend-post a{
-    background: white;
+    background: #eee;
     padding: 10px;
     margin: 0 30px;
     text-decoration: none;
@@ -44,6 +46,7 @@ nav{
     box-sizing: border-box;
     width: 90%;
     margin-top: 15px;
+    border-radius: 0 40px 40px 0;
 }
 .manu a:hover{
     background: #eee;
@@ -55,6 +58,8 @@ nav{
     padding: 15px;
     margin: 10px 10px;
     width: 80%;
+    border: none;
+    background: #eee;
 }
 
 .sidebare{
@@ -68,39 +73,51 @@ nav{
 }
 
 .main .card{
-    justify-content: space-around;
+    
     padding: 30px;
-    width: 70%;
+    width: 50%;
     margin: auto;
-    margin-top: 50px;
-    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-
-.main .card .cardody{
-    width:100%;
-}
-
-.main .card .card-header{
+.like-cmt{
+    width: 50%;
+    padding: 30px;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.like-cmt input[type="text"]{
+    width: 80%;
+    border: none;
+    background: #eee;
+    padding: 10px;
+
 }
 
-.main .card .card-header .user-profile{
-    display: flex;
+.like-cmt input[type="submit"]{
+    padding: 5px;
+    background: rgb(26, 26, 129);
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.main .card .card-header .avatar{
-    width:20%;
-    border-radius: 50%;
-    height: 90%;
-}
 
 .main .card .card-body img{
     margin: auto;
-    width:100%;
-    height: 80vh;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    width:90%;
+    border-radius: 20px;
+    
+}
+
+.card-body p{
+    text-align: center;
+}
+
+.image-post{
+    display: flex;
+    justify-content: center;
 }
 
 .main .card .function{
@@ -109,32 +126,101 @@ nav{
     justify-content: space-around;
 }
 
-.main .card .card-footer{
-    width: 100%;
+.image-friend img{
+    width: 10%;
+    border-radius: 90px;
+    margin: 5px;
+}
+.image-friend {
+    display: flex;
+    width: 80%;
+}
+.card-friend{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-top: 10px;
+}
+
+.delete-edit-commenter{
+    display: flex;
+    justify-content: space-around;
+}
+.delete-edit-commenter a{
+    margin: 0 5px;
+}
+
+.add,.remove{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comment-content{
+    padding: 5px;
+}
+.add a,.remove a{
+    text-decoration: none;
+    font-style: normal;
+    background: rgb(26, 26, 129);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.remove a{
+    background: red;
+}
+.function a{
+    text-decoration: none;
+    font-style: normal;
+    background: #eee;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.like a{
+    color: black;
+    margin:0 10px;
+}
+.like,.function{
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    padding: 10px;
+    align-items: center;
 }
-
-.main .card .card-footer button{
-    width: 30%;
-    font-size:15px;
-}
-
-.main .card .card-footer form{
+.footer-card{
     display: flex;
+    justify-content: space-around;
 }
 
-.main .card .card-footer form .comment{
-    resize: none;
+.form-comment form{
     width: 100%;
+    margin: 0;
+    box-shadow: none;
+    padding: 0px;
+    border-radius: 0px;
 }
 
-.main .card .comment-content{
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+.image-user{
+    display: flex;
+    background: #eee;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border-radius: 5px;
+}
+.user img{
+    width: 70%;
+    border-radius: 50px;
+}
+.user {
+    width: 20%;
 }
 
-
+.like{
+    cursor: pointer;
+}
 .manu{
     width: 100%;
 }
@@ -145,13 +231,25 @@ h1{
    color: black; 
 }
 
+.profile-user img{
+    width: 15%;
+    border-radius: 70px;
+    border: 10px solid #eee;
+}
+.profile-user{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 .description textarea{
     width: 100%;
     box-sizing: border-box;
     border: none;
     background: #eee;
-    border-radius: 5px;
     resize: none;
+    height: 90px;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -163,10 +261,36 @@ hr{
     border-radius: 50px;
     margin-right: 10px;
 }
+
+.profile-user-comment img{
+    width: 60%;
+    border-radius: 40px;
+    margin-right: 5px;
+}
+.profile-comment{
+    margin-top: 5px;
+}
+
+.profile-user-comment{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+
+}
+.profile-comment{
+    display: flex;
+}
+
+.comment-content{
+    width: 50%;
+    margin: auto;
+    background: #eee;
+}
+
 .profile-pic{
     background: #eee;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .post input{
@@ -174,7 +298,7 @@ hr{
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
-    background: blue;
+    background: rgb(26, 26, 129);
     border: none;
     border-radius: 10px;
     color: white;

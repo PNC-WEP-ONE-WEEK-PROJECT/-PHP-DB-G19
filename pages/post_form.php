@@ -1,4 +1,6 @@
+<!-- header file -->
 <?php require_once "../templates/header.php"; ?>
+<!-- Nav bare -->
 <nav>
     <div class="logo">Facebook <span>2.0</span></div>
     <div class="friend-post">
@@ -29,9 +31,10 @@
         <form action="../controllers/create_post.php" method = "post" enctype="multipart/form-data">
             <div class="head-card">
                 <div class="profile-pic">
-                    <img src="../images/1.jpg" alt="">
+                    <img src="../images/pip-panda.jpg" alt="">
                     <h3>
                         <?php 
+                        // name User 
                         require_once "../controllers/forgot_input_field.php";
                         $statmentName = $database->query("SELECT * FROM users WHERE email = 'soklim.hin@student.passerellesnumeriques.org'");
                         $allNameUser = $statmentName->fetchAll();

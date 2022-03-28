@@ -1,3 +1,4 @@
+/* Style font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 /* Body */
 body{
@@ -33,8 +34,11 @@ body{
 .title h1,a{
     color: blue;
 }
+span,.fullname .input p{
+    color: red;
+}
 
-
+/* Style form */
 form{
     width: 50%;
     margin: auto;
@@ -42,13 +46,12 @@ form{
     padding: 25px;
     border-radius: 10px;
 }
+
 h1,p{
     text-align: center;
     
 }
-span,.fullname .input p{
-    color: red;
-}
+
 .help{
     display: flex;
     justify-content: space-evenly;

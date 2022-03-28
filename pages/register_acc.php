@@ -14,7 +14,9 @@
             // Check not input first name
             session_start();
             if (isset($_SESSION['firstname'])){
+                // Check Session true 
                 if($_SESSION['firstname']){
+                    // Display message
                     echo "<span>Please enter your first name!!<span>";
                 }
             }

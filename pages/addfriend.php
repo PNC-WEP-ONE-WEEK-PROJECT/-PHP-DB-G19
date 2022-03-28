@@ -25,7 +25,23 @@
         </div>
     </div>
     <div class="main">
-        <h1>Add friend</h1>
+        <h1>Add friends</h1>
+        <?php require_once "../models/post.php";
+
+        $users = displayAccountUser();
+        foreach ($users as $user):
+        ?>
+        <div class="card-friend">
+            <div class="image-friend">
+                <img src="../images/pip-panda.jpg" alt="">
+                <h4><?=$user['firstname']?></h4>
+            </div>
+            <div class="add">
+                <a href="">Add friend</a>
+            </div>
+        </div>
+
+        <?php endforeach; ?>
     </div>
 </div>
 

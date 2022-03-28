@@ -1,7 +1,7 @@
 <?php 
 require_once "database.php"; 
 
-// function create comments //
+// function create comment //
 function createComment($content, $postid, $userid)
 {
     global $database;
@@ -13,7 +13,6 @@ function createComment($content, $postid, $userid)
     ]);
 }
 
-
 // function get all comments
 function getAllComment($postid)
 {
@@ -23,5 +22,34 @@ function getAllComment($postid)
         ':postid' => $postid,
     ]);
     return $statement->fetchAll();
+}
+
+
+// Fuction delete comments
+function deleteComment($id){
+    global $database;
+    $statement = $database->prepare("DELETE FROM comments WHERE commentid = :id");
+    $statement->execute([
+        ':id' => $id,
+    ]);
+}
+
+
+// Function edit comments
+function editComment($id){
+    global $database;
+    $statement = $database->prepare('SELECT * FROM comments WHERE commentid = :id');
+    $statement->execute([
+        ':id'=>$id,
+    ]);
+    return $statement->fetch();
+}
+
+
+// Update comment post
+
+function updateComment($content,$postid,$userid,$commentid){
+    global $database;
+    $statement = $database->query("UPDATE comments SET content = '$content',postid= $postid,userid= $userid WHERE commentid= $commentid");
 }
 

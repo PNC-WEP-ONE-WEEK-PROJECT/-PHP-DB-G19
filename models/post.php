@@ -29,7 +29,8 @@ function getItem()
 function createPost($description,$image,$userid)
 {
     global $database;
-    $statement = $database->prepare("INSERT INTO posts(description,image,userid) VALUES(:description,:image,:userid)");
+    $statement = $database->prepare("INSERT INTO posts(description,image,userid) 
+    VALUES(:description,:image,:userid)");
     $statement->execute([
         ':description' => $description,
         ':image' => $image,
@@ -51,8 +52,11 @@ function editPost($id){
 
 
 // Function display all post
-function displayPost(){
-
+function displayAccountUser(){
+    global $database;
+    $statement = $database->prepare("SELECT firstname FROM users ORDER BY firstname DESC");
+    $statement->execute();
+    return $statement->fetchAll();
 }
 
 
@@ -72,12 +76,18 @@ function deletePost($id)
 function updatePost($description,$image,$id,$userid){
     global $database;
     $statement = $database->query("UPDATE posts SET description = '$description',image = '$image',userid = $userid WHERE postid= $id");
-    // $statement->execute([
-    //     ':description'=>$description,
-    //     ':image'=>$image,
-    //     ':id'=>$id,
-    //     ':userid'=>$userid
-    // ]);
 }
 
+
+
+
+
+
+
+
+// Logout Account
+
+function logOut(){
+
+}
 
